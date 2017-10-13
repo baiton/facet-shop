@@ -34,25 +34,28 @@
 }
 
 .facet-title{
-  font-size: 40px;
+  font-size: 60px;
+  color: white;
 }
 
 .facet-bg{
   background-color: rgb(144, 127, 176);
 }
 
-.hvr-grow {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
+.wrapper{
+  background-color: rgba(230, 210, 170, 0.8);
 }
-.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+
+.home-bg{
+  background-image: url("https://c.pxhere.com/photos/e8/90/amethyst_crystal_purple_macro_quartz_mineral_gem_stone-623881.jpg!d");
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+}
+
+.home-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -45,9 +45,9 @@ export default class Home extends Component {
   }
 
   render() {
-    console.log("this.state", this.state);
     return (
-      <div className="m-5">
+      <div className="main-facet-bg home-content my-auto">
+          <h1 className="m-0 facet-title">Facet</h1>
         <Button color="info" onClick={this.toggle}>Click Here to Shop!</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalBody>

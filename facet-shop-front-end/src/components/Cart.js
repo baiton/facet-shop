@@ -14,27 +14,30 @@ export default class Cart extends Component {
 
   render() {
     return (
-      <div className="card bg-light shopping-cart">
+      <div className="card col-8 mx-auto p-0 cart-header-bg shopping-cart">
         <div className="facet-bg card-header cart-header d-flex justify-content-start align-items-center">
           <i className="fa fa-shopping-cart fa-2x m-2"></i>
           <h3>Shopping Cart</h3>
         </div>
-        <div className="item-catcher col-10">
-          <ul className="d-flex cart-list-fix">
-            <li className="list-group-item border-0 col-5">Product</li>
-            <li className="list-group-item border-0 col-3">Price</li>
-            <li className="list-group-item border-0 col-3">Quantity</li>
-            <li className="list-group-item border-0 col-1"></li>
+        <div className="item-catcher mx-auto col-10 p-5">
+          <ul className="d-flex cart-list-fix m-1">
+            <li className="container-fluid border-0 col-5">Product</li>
+            <li className="container-fluid border-0 col-3">Price</li>
+            <li className="container-fluid border-0 col-3">Quantity</li>
+            <li className="container-fluid border-0 col-1"></li>
           </ul>
-          <hr className="separator-line"/>
+          {this.props.user.cart.map((cartItem) =>
           <CartItem
-            cartItems={this.props.cart}
+            key={cartItem.name}
+            removeFromCart={this.props.removeFromCart}
+            cartItem={cartItem}
           />
+        )}
         </div>
         <div className="facet-bg d-flex flex-column align-items-end">
-          <h3 className="">Total: $69.99</h3>
+          <h3 className="m-3 mr-5">Total: {this.props.total}</h3>
           {/* link to balance due */}
-          <button onClick={this._handleEmptyCart} className="btn btn-light">Empty Cart</button>
+          <button onClick={this._handleEmptyCart} className="btn hvr-radial-out-green btn-light m-3 mr-5">Empty Cart</button>
         </div>
       </div>
     )
