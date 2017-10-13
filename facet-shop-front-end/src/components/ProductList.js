@@ -4,9 +4,8 @@ import ProductCard from './ProductCard';
 
 export default class ProductList extends Component {
   render() {
-    console.log("this.props p-list", this.props);
     return (
-      <div className="container d-flex flex-wrap justify-content-center">
+      <div className="container mb-5 d-flex flex-wrap col-10 p-0 wrapper mt-5 rounded justify-content-around">
         {this.props.products.map((product) =>
         <ProductCard
           key={product.id}

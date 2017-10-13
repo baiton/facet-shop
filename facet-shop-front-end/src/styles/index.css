@@ -1,5 +1,17 @@
 body {
+  min-height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Julius Sans One', sans-serif;
 }
+
+.h-w-100{
+  height: 100%;
+  width: 100%;
+}
+
+.main-facet-bg{
+  background: url("https://static.pexels.com/photos/71708/geology-crystals-rock-geode-71708.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100%;
+  }

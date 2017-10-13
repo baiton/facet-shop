@@ -23,8 +23,6 @@ constructor(){
       axios.get('http://localhost:8080')
          .then(response => {
            this.setState({products: response.data})
-            console.log("response", response);
-            // our array is response.data
             // id image name price quantity
          })
    }
@@ -37,10 +35,7 @@ constructor(){
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header gem-header d-flex justify-content-center align-items-center">
-          <h1 className="App-title facet-title">Facet</h1>
-        </header>
+      <div className="h-w-100 App">
         <HashRouter>
           <Switch>
             <Route exact path="/" component={(props) => <Home {...props} {...this.state} makeUser={this.makeUser}/>}/>
