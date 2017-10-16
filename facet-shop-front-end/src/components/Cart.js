@@ -35,7 +35,7 @@ export default class Cart extends Component {
         )}
         </div>
         <div className="facet-bg d-flex flex-column align-items-end">
-          <h3 className="m-3 mr-5">Total: {this.props.total}</h3>
+          {/* <h3 className="m-3 mr-5">Total: {this.props.total}</h3> */}
           {/* link to balance due */}
           <button onClick={this._handleEmptyCart} className="btn hvr-radial-out-green btn-light m-3 mr-5">Empty Cart</button>
         </div>
